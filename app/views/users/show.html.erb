@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="jumbotron">
+    <div class="row">
+      <div class="col-md-7 col-lg-7 mx-auto">
+        <h2>今日使える金額</h2> 
+      </div>
+      <div class="jumbotron col-md-5 col-lg-5 mx-auto my-auto bg-light border">
+        <%= bootstrap_form_with model: @expenses, local:true do |f| %>
+          <h2>かんたん入力</h2><br>
+          <div class="field">
+            <div class="">
+              <%# <% if current_user.categories.empty? %> %>
+                <%# <p>You don't have categories created.</p> %>
+                <%# <%= link_to "Create a new Category", new_categoty_path %> %>
+              <%# <% else %> %>
+                <%# <%= f.select :categories_id, options_from_collection_for_select(Category.all, :id, :name), class: "form-control" %> %>
+              <%# <% end %> %>
+              <%= f.select :category, placeholder: "選択してください", class: "form-select form-select-lg" %>
+              <%= f.text_field :amount, placeholder: "金額", class: "form-control" %>
+            </div>
+            <div class="">
+              <%= f.text_area :description, placeholder: "説明", class: "form-control" %>
+            </div>
+            <div style="text-align:center">
+              <%= f.submit "ADD", class: "btn btn-success w-50 mt-2" %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

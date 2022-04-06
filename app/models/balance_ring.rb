@@ -1,0 +1,2 @@
+class BalanceRing < ApplicationRecord
+end

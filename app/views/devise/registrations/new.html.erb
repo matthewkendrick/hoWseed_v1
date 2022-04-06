@@ -1,0 +1,54 @@
+<section>
+  <div class="jumbotron my-auto w-auto">
+    <div class="container">
+      <div class="jumbotron col-md-7 col-lg-5 mx-auto bg-light border">
+        <h2>Sign up</h2>
+        <div class="box mt-0">
+          <% if @user.errors.any? %>
+            <div id="error_explanation" class="alert alert-danger">
+              <ul>
+                <%= @user.errors.full_messages.each do |message| %>
+                  <li><%= message %></li>
+                <% end %>
+              </ul>
+            </div>
+          <% end %>
+          <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %> 
+            <div class="name-field">
+              <%= f.text_field :last_name, placeholder: "Last Name", class: "form-control w-100" %>
+              <p class="name-space"></p>
+              <%= f.text_field :first_name, placeholder: "First Name", class: "form-control w-100" %>
+            </div>
+            <br>
+
+            <div class="field">
+              <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-control", placeholder:"Email" %>
+            </div>
+            <br>
+
+            <div class="field">
+              <span>
+                <%= f.password_field :password, autocomplete: "new-password", class:"form-control", placeholder:"Password" %>
+              </span><br>
+              <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"form-control", placeholder:"Password(confirmation)" %>
+              <% if @minimum_password_length %>
+                <span style="color:#dc3545">
+                  <em>( <%= @minimum_password_length %> characters minimum )</em>
+                </span>
+              <% end %><br />
+            </div>
+            <div style="margin:2rem 0">
+              <%= f.submit "Sign up", class:"btn btn-success w-100" %>
+            </div>
+            <br>
+          <% end %>
+          </div>
+            <p class="border border-secondary" style="opacity:0.5"></p>
+            <p class="sign_up-subtext">
+              <%= link_to "Log in", new_user_session_path, class:"btn btn-outline-primary mt-3 w-50" %>
+            </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

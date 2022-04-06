@@ -1,0 +1,52 @@
+<div class="container mt-5">
+  <div class="jumbotron col-md-8 col-lg-5 mx-auto bg-light border">
+    <h2>Edit <%= resource_name.to_s.humanize %></h2>
+    <div class="mt-5">
+      <%= bootstrap_form_for ( @user ), url: user_registration_path, local:true do |f| %>
+        <%= render "devise/shared/error_messages", resource: resource %>
+        <div class="field">
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-control" %>
+        </div>
+
+        <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+          <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+        <% end %>
+
+        <div class="field">
+          <%= f.password_field :current_password, autocomplete: "current-password", class:"form-control" %>
+        </div>
+
+        <div class="field">
+          <%= f.password_field :password, autocomplete: "new-password", class:"form-control" %>
+        </div>
+        <div class="field">
+          <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"form-control" %>
+          <span class="text-danger">
+            <% if @minimum_password_length %>
+              <em>( <%= @minimum_password_length %> characters minimum )</em>
+            <% end %>
+          </span>
+        </div>
+
+
+        <div class="actions mt-3">
+          <%= f.submit "Update", class:"btn btn-success w-50" %>
+        </div>
+
+        <div class="mt-3 mb-2" style="text-align:center">
+          <%= link_to "Back", :back, class:"text-secondary mx-auto" %>
+        </div>
+      <% end %>
+      <p class="border border-secondary mt-5"></p>
+    <div class="container mt-5">
+      <h4>Cancel my account</h4>
+
+      <div class="row ml-2">
+        <p>Unhappy?</p>
+        <span>
+          <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class:"btn btn-outline-danger" %>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

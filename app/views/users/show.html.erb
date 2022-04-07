@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container-xl">
   <div class="jumbotron">
     <div class="row">
       <div class="col-md-7 col-lg-7 mx-auto">
@@ -26,6 +26,10 @@
             </div>
           </div>
         <% end %>
+        <p class="border mt-5"></p>
+        <div style="text-align:center">
+          <%= link_to "more info", expenses_path(current_user.id), class: "btn btn-outline-primary w-50 mt-5" %>
+        </div>
       </div>
     </div>
   </div>

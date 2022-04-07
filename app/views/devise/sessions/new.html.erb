@@ -28,7 +28,9 @@
             </div>
 
             <div class="actions mt-3">
-              <%= f.submit "Log in", class:"btn btn-primary w-100" %>
+              <%= button_tag type: "submit", class:"btn btn-primary w-100" do %>
+                Log in <i class="fas fa-sign-in-alt"></i>
+              <% end %>
               <% if devise_mapping.rememberable? %>
                 <div class="login-remember_me">
                   <%= f.check_box :remember_me, class:"checkbox" %>

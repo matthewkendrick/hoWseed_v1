@@ -9,6 +9,8 @@ class IncomesController < ApplicationController
   end
 
   def create
+  income.save
+  redirect_to incomes_path(current_user.id) 
   end
 
   def edit

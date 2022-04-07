@@ -3,9 +3,9 @@
     <%= form_with model: @income, url: incomes_path, local:true do |f| %>
       <div class="" style="display:flex">
         <h2>Income</h2>
-        <button class="btn rounded-circle my-auto" type="button" style="font-size:20px; opacity:0.7;">
+        <%= link_to edit_income_path(current_user.id), class: "btn rounded-circle my-auto", style: "font-size:20px; opacity:0.7;" do %>
           <i class="fas fa-plus-circle"></i>
-        </button>
+        <% end %>
       </div>
       <div class="container">
         <div class="row">
@@ -13,9 +13,8 @@
             <table class="table table-striped">
               <thead>
                 <tr>
-                  <th>収入源</th>
-                  <th>金額</th>
-                  <th>貯金</th>
+                  <th>収入額</th>
+                  <th>貯金額</th>
                   <th style="width:80px"></th>
                 </tr>
               </thead>
@@ -23,17 +22,15 @@
                   <tr>
                     <td>aaa</td>
                     <td>aaa</td>
-                    <td>aaa</td>
                     <td>
-                      <button class="btn btn-outline-dark rounded-circle" type="button" style="font-size:13px">
+                      <%= link_to new_income_path(current_user.id), class: "btn btn-outline-dark rounded-circle", style: "font-size:13px" do %>
                         <i class="far fa-pen"></i>
-                      </button>
+                      <% end %>
                     </td>
                   </tr>
                 </tbody>
               <tfoot>
                   <tr>
-                    <td>合計</td>
                     <td>aaa</td>
                     <td>aaa</td>
                     <td></td>

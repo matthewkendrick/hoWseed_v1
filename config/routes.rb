@@ -12,6 +12,9 @@ Rails.application.routes.draw do
   resources :expenses
   resources :fixed_expenses
   resources :incomes
+  resources :users
+
+  post "/incomes/new"  => "incomes#create"
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

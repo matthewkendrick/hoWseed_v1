@@ -37,12 +37,21 @@
               <div class="btn-group">
                   <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
                       aria-expanded="false">Settings</button>
-                  <div class="dropdown-menu">
-                      <div class="dropdown-item"><%= link_to "User Information", edit_user_registration_path(current_user.id), class: "text-secondary" %></div>
-                      <div class="dropdown-item"><%= link_to "Fixed Expenses", fixed_expenses_path(current_user.id), class: "text-secondary" %></div>
-                      <div class="dropdown-item"><%= link_to "Incomes", incomes_path(current_user.id), class: "text-secondary" %></div>
-                      <div class="dropdown-divider"></div>
-                      <div class="dropdown-item">Separated link</div>
+                  <div class="dropdown-menu" style="min-width:200px">
+                    <div class="dropdown-item" style="display:flex;">
+                      <i class="fas fa-user-check text-secondary my-auto mr-2" style="max-width:16px"></i>
+                      <%= link_to "User Information", edit_user_registration_path(current_user.id), class: "text-secondary" %>
+                    </div>
+                    <div class="dropdown-item" style="display:flex;">
+                      <i class="fas fa-file-invoice-dollar text-secondary my-auto mr-2" style="max-width:16px"></i>
+                      <%= link_to "Fixed Expenses", fixed_expenses_path(current_user.id), class: "text-secondary" %>
+                    </div>
+                    <div class="dropdown-item" style="display:flex;">
+                      <i class="fas fa-piggy-bank text-secondary my-auto mr-2" style="max-width:16px"></i>
+                      <%= link_to "Incomes", incomes_path(current_user.id), class: "text-secondary" %>
+                    </div>
+                    <div class="dropdown-divider"></div>
+                    <div class="dropdown-item">Separated link</div>
                   </div>
               </div><!-- /btn-group -->
             </li><br>

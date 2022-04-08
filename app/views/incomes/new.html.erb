@@ -8,20 +8,20 @@
             <div class="field mb-3">
               <h5>Income</h5>
               <div class="control ml-4" style="display:flex;">
-                <p class="mr-3" style="font-size:24px">¥ </p>
+                <i class="fas fa-yen-sign my-auto mr-3 fa-2x"></i>
                 <%= f.number_field :amount, class: "form-control" %>
               </div>
             </div>
 
-            <div class="field">
+            <div class="field mt-5">
               <h5>Saving</h5>
               <div class="control ml-4" style="display:flex;">
-                <p class="mr-3" style="font-size:24px">¥ </p>
+                <i class="fas fa-yen-sign my-auto mr-3 fa-2x"></i>
                 <%= f.number_field :saving, class: "form-control" %>
               </div>
             </div>
 
-            <div class="field mt-3" style="display:flex">
+            <div class="field mt-5" style="display:flex">
               <h5>Start<br><%= f.date_field :period_start, class: "form-control" %></h5>
               <span class="mx-auto my-auto">〜</span>
               <h5>End<br><%= f.date_field :period_end, class: "form-control" %></h5>
@@ -31,7 +31,7 @@
               <%= f.submit "Add", class: "btn btn-outline-success w-50" %>
             </div>
             <div class="mt-5" style="text-align:center">
-              <%= link_to "Back", :back, class:"btn btn-outline-secondary mx-auto w-50", style: "border:none; opacity:0.7" %>
+              <%= link_to "Back", :back, class:"btn btn-outline-secondary rounded rounded-pill mx-auto w-25", style: "border:none; opacity:0.7" %>
             </div>
             <br>
           <% end %>

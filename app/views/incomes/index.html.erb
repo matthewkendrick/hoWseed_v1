@@ -4,7 +4,7 @@
       <div class="" style="display:flex">
         <h2>Income</h2>
         <%= link_to new_income_path(current_user.id), class: "btn rounded-circle my-auto", style: "font-size:22px; opacity:0.7; color: #28a745" do %>
-          <i class="fas fa-plus-circle"></i>
+          <i class="fas fa-plus-circle fa-lg"></i>
         <% end %>
       </div>
       <div class="jumbotron bg-light shadow" style="border-radius:8px;">
@@ -13,8 +13,8 @@
             <table class="table table-hover" style="text-align:center">
               <thead>
                 <tr>
-                  <th>収入額 (¥)</th>
-                  <th>貯金額 (¥)</th>
+                  <th>収入額 <i class="fas fa-yen-sign"></i></th>
+                  <th>貯金額 <i class="fas fa-yen-sign"></i></th>
                   <th>Start</th>
                   <th>End</th>
                   <th style="width:80px"></th>

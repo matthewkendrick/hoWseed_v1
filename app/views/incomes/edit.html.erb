@@ -1,26 +1,33 @@
 <div class="jumbotron my-auto">
   <div class="container-xl">
     <div class="jumbotron col-md-7 col-lg-6 mx-auto bg-light border">
-      <h2>Edit Income</h2><br>
+      <h2 style="display:flex">
+        Edit Income
+        <div class="ml-auto">
+          <%= button_to edit_income_path(@income), method: :delete, class: "btn btn-danger" do %>
+            <i class="far fa-trash"></i>
+          <% end %>
+        </div>
+      </h2><br>
       <div class="ml-3">
         <%= form_with model: @income, url: edit_income_path, local:true do |f| %>
           <div class="field mb-3">
             <h5>Income</h5>
             <div class="control ml-4" style="display:flex;">
-              <p class="mr-3" style="font-size:24px">¥ </p>
+              <i class="fas fa-yen-sign my-auto mr-3 fa-2x"></i>
               <%= f.number_field :amount, autocomplete: "amount", class: "form-control", step: "1000" %>
             </div>
           </div>
 
-          <div class="field">
+          <div class="field mt-5">
             <h5>Saving</h5>
-            <div class="control ml-4" style="display:flex; font-size:24px">
-              <p class="mr-3" style="font-size:24px">¥ </p>
+            <div class="control ml-4" style="display:flex;">
+              <i class="fas fa-yen-sign my-auto mr-3 fa-2x"></i>
               <%= f.number_field :saving, class: "form-control", step: "1000" %>
             </div>
           </div>
 
-          <div class="field mt-3" style="display:flex">
+          <div class="field mt-5" style="display:flex">
             <h5>Start<br><%= f.date_field :period_start, class: "form-control" %></h5>
             <span class="mx-auto my-auto">〜</span>
             <h5>End<br><%= f.date_field :period_end, class: "form-control" %></h5>
@@ -28,6 +35,7 @@
 
           <div class="actions mt-3">
             <%= f.submit "Update", class: "btn btn-outline-success w-50" %>
+            
           </div>
           <div class="mt-5" style="text-align:center">
             <%= link_to "Back", :back, class:"btn btn-outline-secondary rounded rounded-pill mx-auto w-25", style: "border:none; opacity:0.7" %>

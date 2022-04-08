@@ -14,9 +14,9 @@ Rails.application.routes.draw do
   resources :incomes
   resources :users
 
-  post "/incomes/new"         => "incomes#create"
-  patch "/incomes/:id/edit"   => "incomes#update"
-  delete "/incomes/:id/edit"  => "incomes#destroy"
+  post    "/incomes/new"       => "incomes#create"
+  patch   "/incomes/:id/edit"  => "incomes#update"
+  delete  "/incomes/:id/edit"  => "incomes#destroy"
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

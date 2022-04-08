@@ -2,7 +2,7 @@
   <div class="container-xl mx-auto my-auto">
     <%= form_with model: @income, url: incomes_path, local:true do |f| %>
       <div class="" style="display:flex">
-        <h2>Income</h2>
+        <h2 class="text-secondary">Income</h2>
         <%= link_to new_income_path(current_user.id), class: "btn rounded-circle my-auto", style: "font-size:22px; opacity:0.7; color: #28a745" do %>
           <i class="fas fa-plus-circle fa-lg"></i>
         <% end %>

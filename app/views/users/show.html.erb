@@ -1,10 +1,10 @@
 <div class="container-xl">
   <div class="jumbotron">
     <div class="row">
-      <div class="col-md-7 col-lg-7 mx-auto">
+      <div class="col-md-6 col-lg-7 mx-auto">
         <h2>今日使える金額</h2> 
       </div>
-      <div class="jumbotron col-md-5 col-lg-5 mx-auto my-auto bg-light border">
+      <div class="jumbotron col-md-6 col-lg-5 mx-auto my-auto bg-light border">
         <%= bootstrap_form_with model: @expenses, local:true do |f| %>
           <h2>かんたん入力</h2><br>
           <div class="field">
@@ -22,13 +22,13 @@
               <%= f.text_area :description, placeholder: "説明", class: "form-control" %>
             </div>
             <div style="text-align:center">
-              <%= f.submit "ADD", class: "btn btn-success w-50 mt-2" %>
+              <%= f.submit "ADD", class: "btn btn-success w-50 mt-3" %>
             </div>
           </div>
         <% end %>
         <p class="border mt-5"></p>
         <div style="text-align:center">
-          <%= link_to "more info", expenses_path(current_user.id), class: "btn btn-outline-primary w-50 mt-5" %>
+          <%= link_to "more info", expenses_path(current_user.id), class: "btn btn-outline-primary rounded rounded-pill w-25 mt-3" %>
         </div>
       </div>
     </div>

@@ -13,9 +13,8 @@
             <table class="table table-hover" style="text-align:center">
               <thead>
                 <tr>
-                  <th>No.</th>
-                  <th>収入額</th>
-                  <th>貯金額</th>
+                  <th>収入額 (¥)</th>
+                  <th>貯金額 (¥)</th>
                   <th>Start</th>
                   <th>End</th>
                   <th style="width:80px"></th>
@@ -24,13 +23,12 @@
               <tbody>
                 <% @income.each do |income| %>
                   <tr>
-                    <td><%= income.id %></td>
-                    <td>¥ <%= ( income.amount ).to_s(:delimited, delimiter: ',') %></td>
-                    <td>¥ <%= ( income.saving ).to_s(:delimited, delimiter: ',') %></td>
+                    <td><%= ( income.amount ).to_s(:delimited, delimiter: ',') %></td>
+                    <td><%= ( income.saving ).to_s(:delimited, delimiter: ',') %></td>
                     <td><%= income.period_start %></td>
                     <td><%= income.period_end %></td>
                     <td>
-                      <%= link_to new_income_path(current_user.id), class: "btn btn-outline-secondary rounded-circle", style: "font-size:13px" do %>
+                      <%= link_to edit_income_path(income.id), class: "btn btn-outline-secondary rounded-circle", style: "font-size:13px" do %>
                         <i class="far fa-pen"></i>
                       <% end %>
                     </td>

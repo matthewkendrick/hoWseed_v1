@@ -1,6 +1,6 @@
 class IncomesController < ApplicationController
   def index
-    @income = Income.page(params[:page]).per(10)
+    @income = current_user.incomes
   end
 
   def show
@@ -24,9 +24,16 @@ class IncomesController < ApplicationController
   end
 
   def edit
+    @income = Income.find(params[:id])
   end
 
   def update
+    @income = Income.find(params[:id])
+    if @income.update(income_params)
+      redirect_to incomes_path
+    else
+      render :edit
+    end
   end
 
   def destroy

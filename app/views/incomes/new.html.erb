@@ -1,15 +1,15 @@
 <section>
-  <div class="jumbotron my-auto w-auto">
+  <div class="jumbotron my-auto">
     <div class="container">
-      <div class="jumbotron col-md-7 col-lg-5 mx-auto bg-light border">
+      <div class="jumbotron col-md-7 col-xl-5 mx-auto bg-light border">
         <h2>New Income</h2><br>
-        <div>
+        <div class="">
           <%= form_with model: @income, url: new_income_path, local:true do |f| %>
             <div class="field mb-3">
               <h5>Income</h5>
               <div class="control ml-4" style="display:flex;">
                 <p class="mr-3" style="font-size:24px">¥ </p>
-                <%= f.number_field :amount, class: "form-control w-100" %>
+                <%= f.number_field :amount, class: "form-control" %>
               </div>
             </div>
 
@@ -17,14 +17,21 @@
               <h5>Saving</h5>
               <div class="control ml-4" style="display:flex;">
                 <p class="mr-3" style="font-size:24px">¥ </p>
-                <%= f.number_field :saving, class: "form-control w-100" %>
+                <%= f.number_field :saving, class: "form-control" %>
               </div>
             </div>
+
+            <div class="field mt-3" style="display:flex">
+              <h5>Start<br><%= f.date_field :period_start, class: "form-control" %></h5>
+              <span class="mx-auto my-auto">〜</span>
+              <h5>End<br><%= f.date_field :period_end, class: "form-control" %></h5>
+            </div>
+
             <div class="actions mt-3">
-              <%= f.submit class: "btn btn-outline-success w-50" %>
+              <%= f.submit "Add", class: "btn btn-outline-success w-50" %>
             </div>
             <div class="mt-5" style="text-align:center">
-              <%= link_to "Back", :back, class:"text-secondary mx-auto" %>
+              <%= link_to "Back", :back, class:"btn btn-outline-secondary mx-auto w-50", style: "border:none; opacity:0.7" %>
             </div>
             <br>
           <% end %>

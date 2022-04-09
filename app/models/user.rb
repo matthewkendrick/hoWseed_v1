@@ -8,7 +8,7 @@ class User < ApplicationRecord
   validates :first_name,  presence: true
   validates :email,       presence: true
 
-  has_many :expenses,    dependent: :destroy
-  has_many :incomes,     dependent: :destroy
-  accepts_nested_attributes_for :expenses
+  has_many :expenses,       dependent: :destroy
+  has_many :fixed_expenses, dependent: :destroy
+  has_many :incomes,        dependent: :destroy
 end

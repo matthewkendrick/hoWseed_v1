@@ -22,5 +22,9 @@ Rails.application.routes.draw do
   patch   "/expenses/:id/edit" => "expenses#update"
   delete  "/expenses/:id/edit" => "expenses#destroy"
 
+  post    "/fixed_expenses/new"      => "fixed_expenses#create"
+  patch   "/fixed_expenses/:id/edit" => "fixed_expenses#update"
+  delete  "/fixed_expenses/:id/edit" => "fixed_expenses#destroy"
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

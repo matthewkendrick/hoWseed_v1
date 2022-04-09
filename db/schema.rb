@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_08_074858) do
+ActiveRecord::Schema.define(version: 2022_04_09_204758) do
 
   create_table "balance_rings", force: :cascade do |t|
     t.integer "user_id", null: false
@@ -49,7 +49,6 @@ ActiveRecord::Schema.define(version: 2022_04_08_074858) do
 
   create_table "fixed_expenses", force: :cascade do |t|
     t.integer "user_id", null: false
-    t.integer "category_id", null: false
     t.integer "amount", null: false
     t.text "description", default: "", null: false
     t.datetime "created_at", precision: 6, null: false

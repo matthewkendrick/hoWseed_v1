@@ -31,6 +31,13 @@
         
         <% if user_signed_in? %>
           <li id="for-logout-button"><%= link_to "Contact", root_path, class: "text-secondary" %></li>
+          <li class="nav_new_expense">
+            <button class="btn" type="button">
+              <%= link_to new_expense_path do %>
+                <i class="fas fa-comments-dollar fa-3x text-info"></i>
+              <% end %>
+            </button>
+          </li>
           <span class="">
             <li>
               <!-- Example single danger button -->

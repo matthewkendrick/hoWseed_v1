@@ -18,12 +18,12 @@ class ExpensesController < ApplicationController
     if @expense.save
       redirect_to root_path
     else
-      render :new
+      redirect_to expenses_path
     end
   end
 
   def edit
-    @expense = Income.find(params[:id])
+    @expense = Expense.find(params[:id])
   end
 
   def update

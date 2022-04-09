@@ -66,8 +66,6 @@ GEM
       execjs (~> 2)
     bcrypt (3.1.17)
     bindex (0.8.1)
-    binding_of_caller (1.0.0)
-      debug_inspector (>= 0.0.1)
     bootsnap (1.11.1)
       msgpack (~> 1.2)
     bootstrap (4.6.1)
@@ -92,7 +90,6 @@ GEM
     childprocess (4.1.0)
     concurrent-ruby (1.1.10)
     crass (1.0.6)
-    debug_inspector (1.1.0)
     devise (4.8.1)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -278,7 +275,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  binding_of_caller
   bootsnap (>= 1.4.4)
   bootstrap (~> 4.5)
   bootstrap_form

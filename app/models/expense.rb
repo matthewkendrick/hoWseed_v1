@@ -1,7 +1,6 @@
 class Expense < ApplicationRecord
   belongs_to :user
-  def new
-    @expenses = Expense.new()
-  end
+
+  validates :amount, :quantity, :description, presence: true
   
 end

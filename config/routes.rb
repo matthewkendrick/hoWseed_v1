@@ -18,5 +18,9 @@ Rails.application.routes.draw do
   patch   "/incomes/:id/edit"  => "incomes#update"
   delete  "/incomes/:id/edit"  => "incomes#destroy"
 
+  post    "/expenses/new"      => "expenses#create"
+  # patch   "/"
+  # delete  "/"
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

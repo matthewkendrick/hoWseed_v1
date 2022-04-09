@@ -5,22 +5,25 @@
         <h2>今日使える金額</h2> 
       </div>
       <div class="jumbotron col-md-6 col-lg-5 mx-auto my-auto bg-light shadow" style="border-radius:8px">
-        <%= form_with model: @expenses, local:true do |f| %>
+        <%= form_with model: @expense, url:new_expense_path, local:true do |f| %>
           <h2 class="text-secondary" style="text-align:center">かんたん入力</h2><br>
+            <div class="">
+              <%= f.hidden_field :user_id, :value => @user %>
+            </div>
             <div class="" style="display:flex; justify-content:center">
               <i class="fas fa-yen-sign my-auto mr-4 fa-2x text-info"></i>
               <%= f.number_field :amount, placeholder: "金額", class: "form-control w-50", step: "100" %>
             </div>
             <div class="mt-3" style="display:flex; justify-content:center">
               <i class="fas fa-sort-amount-up my-auto mr-3 fa-2x text-info"></i>
-              <%= f.number_field :quantity, placeholder: "個数",class: "form-control w-50" %>
+              <%= f.number_field :quantity, placeholder: "個数",class: "form-control w-50", value: "1" %>
             </div>
             <div class="mt-3 mb-3" style="display:flex; justify-content:center">
               <i class="fas fa-comments my-auto mr-3 fa-2x text-info"></i>
               <%= f.text_area :description, placeholder: "説明", class: "form-control w-50" %>
             </div>
             <div style="text-align:center">
-              <%= f.submit "ADD", class: "btn btn-success w-50 mt-3" %>
+              <%= f.submit "ADD", url: new_expense_path(current_user.id), class: "btn btn-success w-50 mt-3" %>
             </div>
             <p class="border mt-5"></p>
             <div style="text-align:center">

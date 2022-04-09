@@ -1,2 +1,44 @@
-<h1>Expenses#new</h1>
-<p>Find me in app/views/expenses/new.html.erb</p>
+<section>
+  <div class="jumbotron my-auto">
+    <div class="container-xl">
+      <div class="jumbotron col-md-7 col-lg-6 mx-auto bg-light border">
+        <h2>New Expense</h2><br>
+        <div class="">
+          <%= form_with model: @expense, method: :post, local:true do |f| %>
+            <div class="field mb-3">
+              <h5>Amount</h5>
+              <div class="control ml-4" style="display:flex;">
+                <i class="fas fa-yen-sign my-auto mr-3 fa-2x text-info"></i>
+                <%= f.number_field :amount, class: "form-control" %>
+              </div>
+            </div>
+
+            <div class="field mt-5">
+              <h5>Quantity</h5>
+              <div class="control ml-4" style="display:flex;">
+                <i class="fas fa-yen-sign my-auto mr-3 fa-2x text-info"></i>
+                <%= f.number_field :saving, class: "form-control" %>
+              </div>
+            </div>
+
+            <div class="field mt-5">
+              <h5>Description</h5>
+              <div class="control ml-4" style="display:flex;">
+                <i class="fas fa-yen-sign my-auto mr-3 fa-2x text-info"></i>
+                <%= f.number_field :saving, class: "form-control" %>
+              </div>
+            </div>
+
+            <div class="actions mt-3">
+              <%= f.submit "Add", class: "btn btn-outline-success w-50" %>
+            </div>
+            <div class="mt-5" style="text-align:center">
+              <%= link_to "Back", :back, class:"btn btn-outline-secondary rounded rounded-pill mx-auto w-25", style: "border:none; opacity:0.7" %>
+            </div>
+            <br>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

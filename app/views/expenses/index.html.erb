@@ -3,7 +3,7 @@
     <%= form_with model: @income, url: incomes_path, local:true do |f| %>
       <div class="" style="display:flex">
         <h2 class="text-secondary">Expense</h2>
-        <%= link_to new_expense_path(current_user.id), class: "btn rounded-circle my-auto", style: "font-size:22px; opacity:0.7; color: #28a745" do %>
+        <%= link_to root_path(current_user.id), class: "btn rounded-circle my-auto", style: "font-size:22px; opacity:0.7; color: #28a745" do %>
           <i class="fas fa-plus-circle fa-lg"></i>
         <% end %>
       </div>
@@ -20,7 +20,7 @@
                 </tr>
               </thead>
               <tbody>
-                <% @expenses.each do |expense| %>
+                <% @expense.each do |expense| %>
                   <tr>
                     <td><%= expense.description %></td>
                     <td><%= ( expense.amount ).to_s(:delimited, delimiter: ',') %></td>

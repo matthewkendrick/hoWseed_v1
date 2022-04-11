@@ -11,8 +11,13 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = current_user.id
-    @expense = Expense.all
+    @expenses = Expense.where(user_id: current_user.id)
+    @incomes = Income.where(user_id: current_user.id)
+    @fixed_expenses = FixedExpense.where(user_id: current_user.id)
+
+    @balances_sum_expense = @expenses.sum(:amount)
+    @balances_sum_fixed_expenses = @fixed_expenses.sum(:amount)
+    @balances_2 = @incomes.sum(:amount) - @incomes.sum(:saving)
   end
 
   def new

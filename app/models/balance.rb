@@ -1,8 +1,8 @@
 class Balance < ApplicationRecord
   belongs_to :user
 
-  has_many :incomes,        dependent: :destroy
-  has_many :expenses,       dependent: :destroy
-  has_many :fixed_expenses, dependent: :destroy
+  belongs_to :incomes,        dependent: :destroy
+  belongs_to :expenses,       dependent: :destroy
+  belongs_to :fixed_expenses, dependent: :destroy
   
 end

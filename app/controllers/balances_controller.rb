@@ -3,8 +3,9 @@ class BalancesController < ApplicationController
   end
 
   def show
-    @expenses = Expense.all
-    @incomes = Income.all
+    @expenses = Expense.where(user_id: current_user.id)
+    @incomes = Income.where(user_id: current_user.id)
+    @fixed_expenses = FixedExpense.where(user_id: current_user.id)
   end
 
   def new

@@ -4,9 +4,24 @@
       <div class="col-md-6 col-lg-7 mx-auto">
         <h2 class="test-secondary" style="text-align:center">今日使える金額</h2> 
       </div>
+<div class="">
+  <h5>
+    支出の合計額 <br>
+    = <%= @balances_sum_expense %>
+  </h5>
+</div>
+<div class="">
+    <h5>
+      固定費の合計 <br>
+       = <%= @balances_sum_fixed_expenses %>
+    </h5>
+    <h5>
+      収入 - 貯金 <br>
+      = <%= @balances_2 %>
+    </h5>
+</div>
       <div class="">
           <ul>
-            <li class=""><%= @expense.quantity %></li>
           </ul>
       </div>
       <table class="table light">

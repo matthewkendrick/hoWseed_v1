@@ -9,49 +9,47 @@
       </div>
         <div class="row">
           <div class="col-md-6 col-lg-5 mx-auto">
-                <% @income.each do |income| %>
-                    <div class="jumbotron bg-light shadow" style="border-radius:8px;">
+            <% @income.each do |income| %>
+              <div class="jumbotron bg-light shadow" style="border-radius:8px;">
+                <div class="" style="display:flex">
+                  <div class="">
+                    <div class="" style="display:flex">
+                      <div class="">
+                        <h4 class="text-secondary">収入額</h4>
+                        <span class="ml-3">
+                          <%= ( income.amount ).to_s(:delimited, delimiter: ',') %><br>
+                        </span>
+                      </div>
+                      <div class="ml-auto" style="text-align:center; min-width:100px">
+                        <h4 class="text-secondary">貯金額</h4>
+                        <span class="ml-3">
+                          <%= ( income.saving ).to_s(:delimited, delimiter: ',') %><br>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="mt-3 mb-3 border"></div>
+                    <h4 class="text-secondary">Priod</h4>
+                    <div class="ml-3">
                       <div class="" style="display:flex">
-                        <div class="">
-                          <div class="" style="display:flex">
-                            <div class="">
-                              <h4 class="text-secondary">収入額</h4>
-                              <span class="ml-3">
-                                <%= ( income.amount ).to_s(:delimited, delimiter: ',') %><br>
-                              </span>
-                            </div>
-                            <div class="ml-auto" style="text-align:center; min-width:100px">
-                              <h4 class="text-secondary">貯金額</h4>
-                              <span class="ml-3">
-                                <%= ( income.saving ).to_s(:delimited, delimiter: ',') %><br>
-                              </span>
-                            </div>
-                          </div>
-                          <div class="mt-3 mb-3 border"></div>
-                          <h4 class="text-secondary">Priod</h4>
-                          <div class="ml-3">
-                            <div class="" style="display:flex">
-                              <div class="" style="min-width:100px">
-                                Start <br>
-                                <%= income.period_start %><br>
-                              </div>
-                              <div class="ml-5">
-                                End <br>
-                                <%= income.period_end %>
-                              </div>
-                            </div>
-                          </div>
+                        <div class="" style="min-width:100px">
+                          Start <br>
+                          <%= income.period_start %><br>
                         </div>
-                        <div class="my-auto ml-auto">
-                          <%= link_to edit_income_path(income.id), class: "btn btn-outline-secondary rounded-circle", style: "font-size:13px" do %>
-                            <i class="far fa-pen"></i>
-                          <% end %>
+                        <div class="ml-5">
+                          End <br>
+                          <%= income.period_end %>
                         </div>
                       </div>
+                    </div>
                   </div>
-                <% end %>
-              </tbody>
-            </table>
+                  <div class="my-auto ml-auto">
+                    <%= link_to edit_income_path(income.id), class: "btn btn-outline-secondary rounded-circle", style: "font-size:13px" do %>
+                      <i class="far fa-pen"></i>
+                    <% end %>
+                  </div>
+                </div>
+              </div>
+            <% end %>
           </div>
         </div>
       </div>

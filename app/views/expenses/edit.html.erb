@@ -2,9 +2,9 @@
   <div class="container-xl">
     <div class="jumbotron col-md-7 col-lg-6 mx-auto bg-light border">
       <h2 style="display:flex">
-        Edit Income
+        Edit Expense
         <div class="ml-auto">
-          <%= button_to edit_expense_path(@expense), method: :delete, class: "btn btn-danger" do %>
+          <%= button_to edit_expense_path(@expense), method: :delete, class: "btn btn-outline-danger rounded rounded-circle", style: "opacity:0.7" do %>
             <i class="far fa-trash"></i>
           <% end %>
         </div>
@@ -35,8 +35,8 @@
             </div>
           </div>
 
-          <div class="actions mt-3">
-            <%= f.submit "Update", class: "btn btn-outline-success w-50" %>
+          <div class="actions mt-5">
+            <%= f.submit "Update", class: "btn btn-success w-50" %>
             
           </div>
           <div class="mt-5" style="text-align:center">

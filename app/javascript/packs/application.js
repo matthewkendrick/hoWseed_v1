@@ -14,6 +14,8 @@ import "popper";
 import "bootstrap";
 import "../stylesheets/application";
 
+require("chartkick").use(require("highcharts"))
+
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()

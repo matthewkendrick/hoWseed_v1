@@ -16,6 +16,11 @@
 
  @import "bootstrap";
  @import "nav.scss";
+ @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300&family=Hubballi&family=Noto+Sans+JP&display=swap');
+
+* {
+    font-family: 'Noto Sans JP', sans-serif;
+}
  
  html, body {
    height: 100%;

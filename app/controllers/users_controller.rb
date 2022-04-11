@@ -1,6 +1,10 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
 
+  def self.chart_date
+    order(result_date: :asc).pluck('result_date', 'result').to_h
+  end
+
   def index
     @users = User.all
     @user = current_user
@@ -8,6 +12,7 @@ class UsersController < ApplicationController
 
   def show
     @user = current_user.id
+    @expense = Expense.all
   end
 
   def new

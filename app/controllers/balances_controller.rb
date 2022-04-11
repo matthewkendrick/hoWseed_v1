@@ -3,6 +3,8 @@ class BalancesController < ApplicationController
   end
 
   def show
+    @expenses = Expense.all
+    @incomes = Income.all
   end
 
   def new

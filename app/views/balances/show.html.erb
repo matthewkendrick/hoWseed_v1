@@ -1,2 +1,7 @@
 <h1>Balances#show</h1>
 <p>Find me in app/views/balances/show.html.erb</p>
+
+<% @incomes.each do |income| %>
+  <%= income.amount %>
+  <%= income.saving %>
+<% end %>

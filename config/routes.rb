@@ -4,7 +4,7 @@ Rails.application.routes.draw do
      :registrations => "users/registrations"
    }
 
-  root to: 'users#show'
+  root to: 'balances#show'
 
   resources :balance_rings
   resources :balances

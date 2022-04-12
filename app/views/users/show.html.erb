@@ -2,7 +2,17 @@
   <div class="jumbotron">
     <div class="row">
       <div class="col-md-6 col-lg-7 mx-auto">
-        <h2 class="test-secondary" style="text-align:center">今日使える金額</h2> 
+        <div class="bg-warning mb-3 pt-3 pb-1" style="border-radius:72px; text-align:center">
+          <h2>
+            <%= @today %>
+          </h2>
+          <h5 class="text-dark mr-2" style="opacity:0.7">
+            <%= Date.current.beginning_of_month %> 〜 <%= Date.current.end_of_month %>
+          </h5>
+        </div>
+        <h2 class="test-secondary" style="text-align:center">
+          今日使える金額
+        </h2> 
       </div>
 <div class="">
   <h5>
@@ -13,31 +23,22 @@
 <div class="">
     <h5>
       固定費の合計 <br>
-       = <%= @balances_sum_fixed_expenses %>
+       = <%= @balances_sum_fixed %>
     </h5>
     <h5>
-      収入 - 貯金 <br>
-      = <%= @balances_2 %>
+      ( 収入 - 貯金 ) - (支出 + 固定費) <br>
+      = <%= @balance.to_s(:delimited, delimiter: ',') %>
     </h5>
 </div>
-      <div class="">
-          <ul>
-          </ul>
-      </div>
-      <table class="table light">
-        <thead>
-          <tr>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td></td>
-          </tr>
-        </tbody>
-      </table>
-      <div class="">
-      </div>
-    </div>
-  </div>
+<div class="">
+  <h5>
+    収入の期間 <br>
+    = <%= @balance_period %>
+  </h5>
+</div>
+<div class="">
+  <h5>
+    今日使える金額 <br>
+    = <%= @todays_income.round.to_s(:delimited, delimiter: ',') %>
+  </h5>
 </div>

@@ -7,17 +7,25 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
-    @user = current_user
+    @user  = current_user
   end
 
   def show
-    @expenses = Expense.where(user_id: current_user.id)
-    @incomes = Income.where(user_id: current_user.id)
-    @fixed_expenses = FixedExpense.where(user_id: current_user.id)
+    @expenses         = Expense.where(user_id: current_user.id)
+    @incomes          = Income.where(user_id: current_user.id)
+    @fixed_expenses   = FixedExpense.where(user_id: current_user.id)
+    @period_start     = Date.current.beginning_of_month
+    @period_end       = Date.current.end_of_month
+    @today            = Date.current.strftime('%Y / %m / %d ( %a )')
+    @balance_period   = ( Date.current.end_of_month - Date.current.beginning_of_month ).to_int
 
     @balances_sum_expense = @expenses.sum(:amount)
-    @balances_sum_fixed_expenses = @fixed_expenses.sum(:amount)
-    @balances_2 = @incomes.sum(:amount) - @incomes.sum(:saving)
+    @balances_sum_fixed   = @fixed_expenses.sum(:amount)
+    @expense_all          = @expenses.sum(:amount) + @fixed_expenses.sum(:amount)
+    @balances_2           = @incomes.sum(:amount) - @incomes.sum(:saving)
+    @balance              = @balances_2 - @expense_all
+    @todays_income_true   = @balance / @balance_period
+    @todays_income        = @todays_income_true * 0.6
   end
 
   def new

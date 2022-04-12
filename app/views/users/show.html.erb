@@ -1,19 +1,20 @@
 <div class="container-xl">
   <div class="jumbotron">
     <div class="row">
-      <div class="col-md-6 col-lg-7 mx-auto">
-        <div class="bg-warning mb-3 pt-3 pb-1" style="border-radius:72px; text-align:center">
-          <h2>
+      <div class="col-sm-12 col-lg-7 mx-auto">
+        <div class="bg-warning mb-3 pt-3 pb-1 mx-auto" style="border-radius:32px; text-align:center; max-width:450px">
+          <h3>
             <%= @today %>
-          </h2>
-          <h5 class="text-dark mr-2" style="opacity:0.7">
+          </h3>
+          <h6 class="text-dark mr-2" style="opacity:0.7">
             <%= Date.current.beginning_of_month %> 〜 <%= Date.current.end_of_month %>
-          </h5>
+          </h6>
         </div>
-        <h2 class="test-secondary" style="text-align:center">
-          今日使える金額
-        </h2> 
       </div>
+<div class="">
+  <%= pie_chart ({ "Football": 10, "Basketball": 5 }) %>
+  <%= column_chart [["Football", 10], ["Basketball", 5]] %>
+</div>
 <div class="">
   <h5>
     支出の合計額 <br>
@@ -32,7 +33,7 @@
 </div>
 <div class="">
   <h5>
-    収入の期間 <br>
+    残りの期間 <br>
     = <%= @balance_period %>
   </h5>
 </div>
@@ -40,5 +41,17 @@
   <h5>
     今日使える金額 <br>
     = <%= @todays_income.round.to_s(:delimited, delimiter: ',') %>
+  </h5>
+</div>
+<div class="">
+  <h5>
+    実際に今日使った金額 <br>
+    = <%= @todays_expense %>
+  </h5>
+</div>
+<div class="">
+  <h5>
+    今日使える金額 / 実際に今日使った金額 <br>
+    = <%= @todays_ratio.round %> %
   </h5>
 </div>

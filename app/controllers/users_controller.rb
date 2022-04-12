@@ -11,13 +11,14 @@ class UsersController < ApplicationController
   end
 
   def show
+    # WARNING(fat controller!!!)
     @expenses         = Expense.where(user_id: current_user.id)
     @incomes          = Income.where(user_id: current_user.id)
     @fixed_expenses   = FixedExpense.where(user_id: current_user.id)
     @period_start     = Date.current.beginning_of_month
     @period_end       = Date.current.end_of_month
     @today            = Date.current.strftime('%Y / %m / %d ( %a )')
-    @balance_period   = ( Date.current.end_of_month - Date.current.beginning_of_month ).to_int
+    @balance_period   = ( Date.current.end_of_month - Date.current ).to_int
 
     @balances_sum_expense = @expenses.sum(:amount)
     @balances_sum_fixed   = @fixed_expenses.sum(:amount)

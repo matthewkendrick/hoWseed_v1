@@ -10,11 +10,14 @@
             <%= Date.current.beginning_of_month %> 〜 <%= Date.current.end_of_month %>
           </h6>
         </div>
+        <div class="mt-5" style="opacity:0.8; display:flex; justify-content:center">
+        <%# TODO(割合が円で表示される → 修正) %>
+          <%= pie_chart ({ "今日使った割合(%)": @todays_ratio.round, "残りの割合(%)": @todays_ratio_2.round }), library:{title: {text: "今日使える金額 <br> #{@todays_income.round.to_s(:delimited, delimiter: ',')} 円"}} %>
+        </div>
+        <div class="mt-5" style="opacity:0.8; display:flex; justify-content:center">
+          <%= column_chart [["Football", 10], ["Basketball", 5]] %>
+        </div>
       </div>
-<div class="">
-  <%= pie_chart ({ "Football": 10, "Basketball": 5 }) %>
-  <%= column_chart [["Football", 10], ["Basketball", 5]] %>
-</div>
 <div class="">
   <h5>
     支出の合計額 <br>

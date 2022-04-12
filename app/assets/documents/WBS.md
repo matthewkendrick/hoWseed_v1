@@ -19,7 +19,7 @@
 | 6.3  | controller                                                                | 2022/04/07 | 2022/04/07 |    1.00 | ![progress](https://progress-bar.dev/100/ "progress") |
 | 6.4  | model                                                                     | 2022/04/07 | 2022/04/07 |    1.00 | ![progress](https://progress-bar.dev/100/ "progress") |
 | 6.5  | routing                                                                   | 2022/04/07 | 2022/04/07 |    1.00 | ![progress](https://progress-bar.dev/100/ "progress") |
-| 7    | <span style= "color:#007bff;font-size:20px"><strong><実装></span>         |            |            |       - | ![progress](https://progress-bar.dev/87/ "progress")  |
+| 7    | <span style= "color:#007bff;font-size:20px"><strong><実装></span>         |            |            |       - | ![progress](https://progress-bar.dev/88/ "progress")  |
 | 8    | <strong>機能                                                              | 2022/04/08 | 2022/04/18 |       - | ![progress](https://progress-bar.dev/80/ "progress")  |
 | 8.1  | ユーザーの新規登録                                                        | 2022/04/08 | 2022/04/08 |    2.00 | ![progress](https://progress-bar.dev/100/ "progress") |
 | 8.2  | ログイン                                                                  | 2022/04/08 | 2022/04/08 |    2.00 | ![progress](https://progress-bar.dev/100/ "progress") |
@@ -31,10 +31,10 @@
 | 8.8  | 固定費の新規登録                                                          | 2022/04/12 | 2022/04/12 |    2.00 | ![progress](https://progress-bar.dev/100/ "progress") |
 | 8.9  | 固定費の編集・削除                                                        | 2022/04/13 | 2022/04/13 |    2.00 | ![progress](https://progress-bar.dev/100/ "progress") |
 | 8.10 | 収支の計算処理                                                            | 2022/04/13 | 2022/04/15 |   12.00 | ![progress](https://progress-bar.dev/100/ "progress") |
-| 9    | <strong>レイアウト                                                        | 2022/04/08 | 2022/04/15 |       - | ![progress](https://progress-bar.dev/92/ "progress")  |
+| 9    | <strong>レイアウト                                                        | 2022/04/08 | 2022/04/15 |       - | ![progress](https://progress-bar.dev/96/ "progress")  |
 | 9.1  | 新規登録画面                                                              | 2022/04/09 | 2022/04/09 |    2.00 | ![progress](https://progress-bar.dev/100/ "progress") |
 | 9.2  | ログイン画面                                                              | 2022/04/08 | 2022/04/08 |    2.00 | ![progress](https://progress-bar.dev/100/ "progress") |
-| 9.3  | ユーザーTop画面                                                           | 2022/04/08 | 2022/04/08 |    2.00 | ![progress](https://progress-bar.dev/10/ "progress")  |
+| 9.3  | ユーザーTop画面                                                           | 2022/04/08 | 2022/04/08 |    2.00 | ![progress](https://progress-bar.dev/50/ "progress")  |
 | 9.4  | ユーザー編集画面                                                          | 2022/04/09 | 2022/04/09 |    2.00 | ![progress](https://progress-bar.dev/100/ "progress") |
 | 9.5  | 支出登録画面                                                              | 2022/04/10 | 2022/04/10 |    2.00 | ![progress](https://progress-bar.dev/100/ "progress") |
 | 9.6  | 支出編集画面                                                              | 2022/04/11 | 2022/04/11 |    2.00 | ![progress](https://progress-bar.dev/100/ "progress") |

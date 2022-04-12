@@ -32,6 +32,7 @@ class UsersController < ApplicationController
     @todays_income        = @todays_income_true * 0.6
     @todays_expense       = @todays_expenses.sum(:amount)
     @todays_ratio         = ( @todays_expense / @todays_income ) * 100
+    @todays_ratio_2       = 100 - @todays_ratio
   end
 
   def new

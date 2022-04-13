@@ -13,18 +13,23 @@ class UsersController < ApplicationController
   def show
     # WARNING(fat controller!!!)
     @user             = current_user
+    
     @today            = Date.current.strftime('%Y / %m / %d ( %a )')
-    range             = Date.today.beginning_of_day..Date.today.end_of_day
+    range_today       = Date.today.beginning_of_day..Date.today.end_of_day
+    range_yesterday   = Date.yesterday.beginning_of_day..Date.yesterday.end_of_day
+    # TODO(削除するための日付を指定する)
+    # dalete_date       = Date.
     @expenses         = Expense.where(user_id: current_user.id)
     @incomes          = Income.where(user_id: current_user.id)
     @fixed_expenses   = FixedExpense.where(user_id: current_user.id)
     @period_start     = Date.current.beginning_of_month
     @period_end       = Date.current.end_of_month
     @balance_period   = ( Date.current.end_of_month - Date.current ).to_int
-    @todays_expenses  = Expense.where(created_at: range)
+    @todays_expenses  = Expense.where(created_at: range_today)
 
     @balances_sum_expense = @expenses.sum(:amount)
     @balances_sum_fixed   = @fixed_expenses.sum(:amount)
+    @saving               = @incomes.sum(:saving)
     @expense_all          = @expenses.sum(:amount) + @fixed_expenses.sum(:amount)
     @balances_2           = @incomes.sum(:amount) - @incomes.sum(:saving)
     @balance              = @balances_2 - @expense_all

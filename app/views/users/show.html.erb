@@ -11,50 +11,59 @@
           </h6>
         </div>
         <div class="mt-5" style="opacity:0.8; display:flex; justify-content:center">
-        <%# TODO(割合が円で表示される → 修正) %>
-          <%= pie_chart ({ "今日使った割合(%)": @todays_ratio.round, "残りの割合(%)": @todays_ratio_2.round }), library:{title: {text: "今日使える金額 <br> #{@todays_income.round.to_s(:delimited, delimiter: ',')} 円"}} %>
+          <%= pie_chart ({ "今日使った金額(%)": @todays_ratio.round, "": @todays_ratio_2.round }), library:{title: {text: "今日使える金額 <br> #{@todays_income.round.to_s(:delimited, delimiter: ',')} 円"}} %>
+
         </div>
-        <div class="mt-5" style="opacity:0.8; display:flex; justify-content:center">
-          <%= column_chart [["Football", 10], ["Basketball", 5]] %>
+        <%# TODO(bar_chartを用いて今日と昨日の比較を表現したい) %>
+      </div>
+    </div>
+  </div>
+  <div class="accordion col-md-6 mx-auto" id="accordionExample">
+    <div class="card">
+      <div class="card-header" id="headingOne">
+        <h2 class="mb-0">
+          <button class="btn btn-link btn-block" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" style="text-decoration:none; font-size:24px;">
+            Details
+          </button>
+        </h2>
+      </div>
+
+      <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+        <div class="card-body">
+          <div class="">
+            <%= link_to expenses_path, class: "btn btn-block" do %>
+              <h5>
+                今日使った金額 <br><br>
+                <p class="fas fa-yen-sign my-auto mr-1 fa-lg text-info"><%= @todays_expense %></p>
+              </h5>
+            <% end %>
+          </div>
+          <p class="border"></p>
+          <div class="" style="min-width:100px">
+            <%= link_to incomes_path, class: "btn btn-block" do %>
+              <h5>
+                今月の貯金額 <br><br>
+                <p class="fas fa-yen-sign my-auto mr-1 fa-lg text-info"><%= @saving.to_s(:delimited, delimiter: ',') %></p>
+              </h5>
+            <% end %>
+          </div>
+          <p class="border"></p>
+          <div class="">
+            <%= link_to fixed_expenses_path, class: "btn btn-block" do %>
+              <h5>
+                固定費の合計 <br><br>
+                <p class="fas fa-yen-sign my-auto mr-1 fa-lg text-info"><%= @balances_sum_fixed.to_s(:delimited, delimiter: ',') %></p>
+              </h5>
+            <% end %>
+          </div>
+          <p class="border"></p> <br>
+          <div class="">
+            <h5>
+              ...<i class="fas fa-piggy-bank text-warning"></i> 次の給料日まであと <%= @balance_period %> 日
+            </h5>
+          </div>
         </div>
       </div>
-<div class="">
-  <h5>
-    支出の合計額 <br>
-    = <%= @balances_sum_expense %>
-  </h5>
-</div>
-<div class="">
-    <h5>
-      固定費の合計 <br>
-       = <%= @balances_sum_fixed %>
-    </h5>
-    <h5>
-      ( 収入 - 貯金 ) - (支出 + 固定費) <br>
-      = <%= @balance.to_s(:delimited, delimiter: ',') %>
-    </h5>
-</div>
-<div class="">
-  <h5>
-    残りの期間 <br>
-    = <%= @balance_period %>
-  </h5>
-</div>
-<div class="">
-  <h5>
-    今日使える金額 <br>
-    = <%= @todays_income.round.to_s(:delimited, delimiter: ',') %>
-  </h5>
-</div>
-<div class="">
-  <h5>
-    実際に今日使った金額 <br>
-    = <%= @todays_expense %>
-  </h5>
-</div>
-<div class="">
-  <h5>
-    今日使える金額 / 実際に今日使った金額 <br>
-    = <%= @todays_ratio.round %> %
-  </h5>
+    </div>
+  </div>
 </div>

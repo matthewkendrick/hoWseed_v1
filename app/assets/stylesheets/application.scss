@@ -20,18 +20,13 @@
 
 * {
   font-family: 'M PLUS Rounded 1c', sans-serif;
+  box-sizing: border-box;
 }
  
  html, body {
    height: 100%;
    margin: 0;
    padding: 0;
- }
- 
- // ここまでがハンバーガーメニュー
- 
- * {
-   box-sizing: border-box;
  }
  
  header {
@@ -51,7 +46,7 @@
  main {
    width: auto;
  }
- 
+
  .card {
    margin-top: 3rem;
    margin-bottom: 3rem;

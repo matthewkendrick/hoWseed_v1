@@ -7,33 +7,30 @@
           <i class="fas fa-plus-circle fa-lg"></i>
         <% end %>
       </div>
-      <div class="jumbotron bg-light shadow" style="border-radius:8px;">
-        <div class="row">
-          <div class="col-lg-12 mx-auto">
-            <table class="table table-hover" style="text-align:center">
-              <thead>
-                <tr>
-                  <th>出費品目</th>
-                  <th>金額 <i class="fas fa-yen-sign"></i></th>
-                  <th style="width:80px"></th>
-                </tr>
-              </thead>
-              <tbody>
-                <% @fixed_expense.each do |fixed_expense| %>
-                  <tr>
-                    <td><%= fixed_expense.description %></td>
-                    <td><%= ( fixed_expense.amount ).to_s(:delimited, delimiter: ',') %></td>
-                    <td>
+      <div class="row">
+        <% @fixed_expense.each do |fixed_expense| %>
+          <div class="col-lg-8 mx-auto">
+            <div class="jumbotron bg-light shadow" style="border-radius:8px;">
+              <div class="" style="display:flex">
+                <div class="">
+                  <div class="" style="display:flex">
+                    <div class="">
+                      <h4 class="ml-3">
+                        <%= fixed_expense.description %><br>
+                      </h4>
+                      <p class="border"></p>
+                      <%= ( fixed_expense.amount ).to_s(:delimited, delimiter: ',') %>
                       <%= link_to edit_fixed_expense_path(fixed_expense.id), class: "btn btn-outline-secondary rounded-circle", style: "font-size:13px" do %>
                         <i class="far fa-pen"></i>
                       <% end %>
-                    </td>
-                  </tr>
-                <% end %>
-              </tbody>
-            </table>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
+        <% end %>
       </div>
     <% end %>
   </div>

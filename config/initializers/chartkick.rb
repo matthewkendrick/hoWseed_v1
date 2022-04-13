@@ -1,6 +1,6 @@
 Chartkick.options = {
   donut: true, # ドーナツグラフ
-  width: '400px',
+  width: '800px',
   colors: [ "#769fcd",
             "#b9d7ea",
             "#d6e6f2",
@@ -8,11 +8,11 @@ Chartkick.options = {
           ],
   message: {empty: "データがありません"},
   thousands: ",", 
-  suffix: "円",
+  suffix: "%",
   legend: false, # 凡例非表示
 
   library: { # ここからHighchartsのオプション
-    title: { # タイトル表示(ここでは、グラフの真ん中に配置して,viewでデータを渡しています。*後述)
+    title: { 
       align: 'center',
       verticalAlign: 'middle',
     },

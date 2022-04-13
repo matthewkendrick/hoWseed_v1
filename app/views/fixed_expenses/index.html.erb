@@ -1,36 +1,33 @@
 <div class="jumbotron">
   <div class="container-xl mx-auto my-auto">
     <%= form_with model: @fixed_expense, url: fixed_expenses_path, local:true do |f| %>
-      <div class="" style="display:flex">
+      <div class="mx-auto col-md-7" style="display:flex">
         <h2 class="text-secondary">Fixed Expense</h2>
         <%= link_to new_fixed_expense_path, class: "btn rounded-circle my-auto", style: "font-size:22px; opacity:0.7; color: #28a745" do %>
           <i class="fas fa-plus-circle fa-lg"></i>
         <% end %>
       </div>
-      <div class="row">
-        <% @fixed_expense.each do |fixed_expense| %>
-          <div class="col-lg-8 mx-auto">
-            <div class="jumbotron bg-light shadow" style="border-radius:8px;">
-              <div class="" style="display:flex">
-                <div class="">
-                  <div class="" style="display:flex">
-                    <div class="">
-                      <h4 class="ml-3">
-                        <%= fixed_expense.description %><br>
-                      </h4>
-                      <p class="border"></p>
-                      <%= ( fixed_expense.amount ).to_s(:delimited, delimiter: ',') %>
-                      <%= link_to edit_fixed_expense_path(fixed_expense.id), class: "btn btn-outline-secondary rounded-circle", style: "font-size:13px" do %>
-                        <i class="far fa-pen"></i>
-                      <% end %>
-                    </div>
-                  </div>
-                  </div>
-                </div>
-              </div>
+      <% @fixed_expense.each do |fixed_expense| %>
+        <div class="jumbotron mx-auto col-md-6 bg-light shadow" style="border-radius:8px;">
+          <div class="">
+            <div class="">
+              <h4>
+                <p class="mr-auto">
+                  <%= fixed_expense.description %>
+                </p>
+              <p class="fas fa-yen-sign fa-lg text-info my-auto" style="text-align:right"><%= ( fixed_expense.amount ).to_s(:delimited, delimiter: ',') %></p>
+              </h4>
             </div>
+            <p class="border"></p>
           </div>
-        <% end %>
+          <div><%= fixed_expense.updated_at %></div>
+          <div class="my-auto" style="text-align:right">
+            <%= link_to edit_fixed_expense_path(fixed_expense.id), class: "btn btn-outline-secondary rounded-circle" do %>
+              <i class="far fa-pen"></i>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
       </div>
     <% end %>
   </div>

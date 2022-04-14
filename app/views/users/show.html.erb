@@ -2,7 +2,7 @@
   <div class="jumbotron">
     <div class="row">
       <div class="col-sm-12 col-lg-7 mx-auto">
-        <div class="bg-warning mb-3 pt-3 pb-1 mx-auto" style="border-radius:32px; text-align:center; max-width:450px">
+        <div class="pt-3 pb-1 mx-auto" style="border-radius:32px; text-align:center; max-width:450px; background-color:rgba( 255, 193, 7, 0.7 )">
           <h3>
             <%= @today %>
           </h3>
@@ -12,7 +12,10 @@
         </div>
         <div class="mt-5">
           <div class="" style="opacity:0.8; display:flex; justify-content:center">
-            <%= pie_chart ({ "今日使った金額(%)": @todays_ratio.round, "": @todays_ratio_2.round }), library:{title: {text: "今日使える金額 <br> #{@todays_income.round.to_s(:delimited, delimiter: ',')} 円"}}, height: "400px" %>
+            <%= pie_chart ({ " ": @todays_ratio.round, "": @todays_ratio_2.round }), library:{title: {text: "今日使える金額<br><br><br>&nbsp;"}}, height: "400px" %>
+            <span class="" style="display:flex; position:absolute; font-size:32px; margin-top:13rem">
+              <p class="fas fa-yen-sign fa-lg text-info my-auto"><%= @todays_income.round.to_s(:delimited, delimiter: ',') %></p> 
+            </span>
           </div>
           <div class="accordion col-md-7 col-lg-9 mx-auto" id="accordionExample">
             <div class="card">
@@ -31,6 +34,15 @@
                       <h5>
                         今日使った金額 <br><br>
                         <p class="fas fa-yen-sign my-auto mr-1 fa-lg text-info"><%= @todays_expense %></p>
+                      </h5>
+                    <% end %>
+                  </div>
+                  <p class="border"></p>
+                  <div class="" style="min-width:100px">
+                    <%= link_to expenses_path, class: "btn btn-block" do %>
+                      <h5>
+                        昨日使った金額 <br><br>
+                        <p class="fas fa-yen-sign my-auto mr-1 fa-lg text-info"><%= @yesterdays_expense %></p>
                       </h5>
                     <% end %>
                   </div>

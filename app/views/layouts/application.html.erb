@@ -50,17 +50,32 @@
                   <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
                       aria-expanded="false">Settings</button>
                   <div class="dropdown-menu" style="min-width:200px">
+
                     <div class="dropdown-item" style="display:flex;">
-                      <i class="fas fa-user-check text-secondary my-auto mr-2" style="max-width:16px"></i>
-                      <%= link_to "User Information", edit_user_registration_path(current_user.id), class: "text-secondary" %>
+                      <div class="my-auto">
+                        <i class="fas fa-user-check text-secondary fa-lg" style="margin-left:.3rem; margin-right:.7rem"></i>
+                      </div>
+                      <div class="my-auto">
+                        <%= link_to "User Information", edit_user_registration_path(current_user.id), class: "text-secondary", style: "text-align:right" %>
+                      </div>
                     </div>
+
                     <div class="dropdown-item" style="display:flex;">
-                      <i class="fas fa-file-invoice-dollar text-secondary my-auto mr-2" style="max-width:16px"></i>
-                      <%= link_to "Fixed Expenses", fixed_expenses_path(current_user.id), class: "text-secondary" %>
+                      <div class="my-auto">
+                        <i class="fas fa-money-check-alt text-secondary fa-lg" style="margin-right:1rem"></i>
+                      </div>
+                      <div class="my-auto">
+                        <%= link_to "Fixed Expenses", fixed_expenses_path(current_user.id), class: "text-secondary", style: "text-align:right" %>
+                      </div>
                     </div>
+
                     <div class="dropdown-item" style="display:flex;">
-                      <i class="fas fa-piggy-bank text-secondary my-auto mr-2" style="max-width:16px"></i>
-                      <%= link_to "Incomes", incomes_path(current_user.id), class: "text-secondary" %>
+                      <div class="my-auto">
+                        <i class="fas fa-piggy-bank text-secondary fa-lg" style="margin-right:1rem"></i>
+                      </div>
+                      <div class="my-auto">
+                        <%= link_to "Incomes", incomes_path(current_user.id), class: "text-secondary" %>
+                      </div>
                     </div>
                   </div>
               </div><!-- /btn-group -->

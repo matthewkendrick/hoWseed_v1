@@ -34,7 +34,7 @@ Chartkick.options = {
           }
         },
         size: '110%',
-        innerSize: '60%', # ドーナツグラフの中の円の大きさ
+        innerSize: '65%', # ドーナツグラフの中の円の大きさ
         borderWidth: 0,
       }
     },

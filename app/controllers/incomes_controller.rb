@@ -1,7 +1,7 @@
 class IncomesController < ApplicationController
   def index
     @income = current_user.incomes
-    @income_card = Income.page(params[:page]).per(1)
+    @incomes = Income.page(params[:page]).per(1)
   end
 
   def show

@@ -1,6 +1,6 @@
 class FixedExpensesController < ApplicationController
   def index
-    @fixed_expense = current_user.fixed_expenses
+    @fixed_expense = current_user.fixed_expenses.order(created_at: :desc)
   end
 
   def show

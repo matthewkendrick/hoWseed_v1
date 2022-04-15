@@ -6,7 +6,7 @@
           <h3>
             <%= @today %>
           </h3>
-          <h6 class="text-dark mr-2" style="opacity:0.8">
+          <h6 class="text-secondary mr-2" style="opacity:0.8">
             <%= Date.current.beginning_of_month %> 〜 <%= Date.current.end_of_month %>
           </h6>
         </div>
@@ -67,7 +67,7 @@
                   <p class="border"></p> <br>
                   <div class="">
                     <h5>
-                      <span class="text-warning">...<i class="fas fa-piggy-bank"></i></span> 次の給料日まであと <%= @balance_period %> 日
+                      <% if false %><span class="text-warning">...<i class="fas fa-piggy-bank"></i></span> 次の給料日まであと <%= @balance_period %> 日です。<% end %>
                     </h5>
                   </div>
                 </div>
@@ -75,9 +75,7 @@
             </div>
           </div>
         </div>
-        <%# TODO(bar_chartを用いて今日と昨日の比較を表現したい) %>
       </div>
     </div>
   </div>
-
 </div>

@@ -24,8 +24,8 @@ class UsersController < ApplicationController
     @expenses             = Expense.where(user_id: current_user.id).where(created_at: range_this_month)
     @incomes              = Income.where(user_id: current_user.id).where(created_at: range_this_month)
     @fixed_expenses       = FixedExpense.where(user_id: current_user.id)
-    @todays_expenses      = Expense.where(created_at: range_today)
-    @yesterdays_expenses  = Expense.where(created_at: range_yesterday)
+    @todays_expenses      = Expense.where(user_id: current_user.id).where(created_at: range_today)
+    @yesterdays_expenses  = Expense.where(user_id: current_user.id).where(created_at: range_yesterday)
 
     @balances_sum_expense = @expenses.sum(:amount)
     @balances_sum_fixed   = @fixed_expenses.sum(:amount)

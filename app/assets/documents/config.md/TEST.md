@@ -413,51 +413,57 @@
     <td id="checkbox"><input type="checkbox"></input>&nbsp;</td>
     <td>&nbsp;</td>
   </tr>
+</table>
+
+<br>
+
+## ②登録情報の変更・退会
+<table>
   <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <th id="for_result">システム</th>
+    <th id="for_result">画面</th>
+    <th id="text">やること</th>
+    <th id="text">想定結果</th>
+    <th id="result">結果</th>
+    <th id="result">実施不要</th>
+  </tr>
+  <tr>
+    <td>家計簿</td>
+    <td>マイページ</td>
+    <td>ハンバーガーメニューの設定(Settings)から、<br>ユーザー情報(User Information)を押下</td>
+    <td>会員情報編集画面に遷移する</td>
     <td id="checkbox"><input type="checkbox"></input>&nbsp;</td>
     <td>&nbsp;</td>
   </tr>
   <tr>
     <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>会員情報編集画面</td>
+    <td>全ての項目を編集し、更新(Update)ボタンを押下</td>
+    <td>マイページに遷移する</td>
     <td id="checkbox"><input type="checkbox"></input>&nbsp;</td>
     <td>&nbsp;</td>
   </tr>
   <tr>
     <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td> &nbsp;</td>
+    <td>会員情報編集画面に戻る</td>
+    <td>編集した内容が正しく反映されている</td>
     <td id="checkbox"><input type="checkbox"></input>&nbsp;</td>
     <td>&nbsp;</td>
   </tr>
   <tr>
     <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td> &nbsp;</td>
+    <td>退会ボタンを押下する</td>
+    <td>ログイン画面に遷移する</td>
     <td id="checkbox"><input type="checkbox"></input>&nbsp;</td>
     <td>&nbsp;</td>
   </tr>
   <tr>
     <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td id="checkbox"><input type="checkbox"></input>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>ログイン画面</td>
+    <td>退会したアカウントでログインする</td>
+    <td>ログインができない</td>
     <td id="checkbox"><input type="checkbox"></input>&nbsp;</td>
     <td>&nbsp;</td>
   </tr>

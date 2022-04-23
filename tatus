@@ -1,0 +1,345 @@
+[33mcommit 2eba1049b951dbb915d9cd270539bfd3d6712ff6[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: matthewkendrick <75340042+matthewkendrick@users.noreply.github.com>
+Date:   Tue Apr 19 08:28:41 2022 +0000
+
+    [Edit]: デプロイの準備
+    
+    Message body
+    none
+    
+    Message footer
+    ポートフォリオ作成フェーズ
+
+[33mcommit a867aaccaabdc5f9a31d2caa838497ec6a28482d[m
+Author: matthewkendrick <75340042+matthewkendrick@users.noreply.github.com>
+Date:   Sun Apr 17 19:22:24 2022 +0000
+
+    [Edit]: WBSの更新
+    
+    Message body
+    none
+    
+    Message footer
+    ポートフォリオ作成フェーズ
+
+[33mcommit 9e1253b6b21c50da048adf723012e40563b95fe4[m
+Author: matthewkendrick <75340042+matthewkendrick@users.noreply.github.com>
+Date:   Fri Apr 15 21:33:33 2022 +0000
+
+    [Edit]: テスト仕様書の完成
+    
+    Message body
+    ・お問い合わせ機能の追加をWBSに計画
+    ・レイアウト調整を含む
+    
+    Message footer
+    ポートフォリオ作成フェーズ
+
+[33mcommit 5aa03b5466eba27fe3cdf1b498b0cbf77b47a648[m
+Author: matthewkendrick <75340042+matthewkendrick@users.noreply.github.com>
+Date:   Fri Apr 15 02:58:03 2022 +0000
+
+    [Add]: テスト仕様書の作成
+    
+    Message body
+    ・前日との比較(グラフ)も盛り込みたい
+    ・お問い合わせ機能及びSNS認証機能の追加も行いたい
+    ・レイアウト調整を含む
+    
+    Message footer
+    ポートフォリオ作成フェーズ
+
+[33mcommit 77cfeea9e12ad20d798d6729a8c2265089a680bc[m
+Author: matthewkendrick <75340042+matthewkendrick@users.noreply.github.com>
+Date:   Thu Apr 14 03:48:09 2022 +0000
+
+    [Edit]: レイアウトの微調整
+    
+    Message body
+    ・前日との比較(グラフ)も盛り込みたい
+    
+    Message footer
+    ポートフォリオ作成フェーズ
+
+[33mcommit f1f5c1567b062b4f0704eef7b1aa5a163fb6c40f[m
+Author: matthewkendrick <75340042+matthewkendrick@users.noreply.github.com>
+Date:   Wed Apr 13 21:36:34 2022 +0000
+
+    [Edit]: レイアウトの微調整
+    
+    Message body
+    以下を含む
+    ・前日との比較(グラフ)も盛り込みたい
+    
+    Message footer
+    ポートフォリオ作成フェーズ
+
+[33mcommit 201e7644905320b0afab0c6c4e26780c57460fca[m
+Author: matthewkendrick <75340042+matthewkendrick@users.noreply.github.com>
+Date:   Wed Apr 13 08:38:34 2022 +0000
+
+    [Edit]: ユーザーTop画面の完成
+    
+    Message body
+    以下を含む
+    ・データ可視化のためのchartkick導入
+    ・WBSの更新
+    ・レイアウトの調整
+    
+    Message footer
+    ・前日との比較(グラフ)も盛り込みたい
+    ポートフォリオ作成フェーズ
+
+[33mcommit 510415fb812c6b6574ca3946f9323890b491c296[m
+Author: matthewkendrick <75340042+matthewkendrick@users.noreply.github.com>
+Date:   Tue Apr 12 23:15:24 2022 +0000
+
+    [Add]: ユーザーTop画面の作成
+    
+    Message body
+    以下を含む
+    ・データ可視化のためのchartkick導入
+    ・WBSの更新
+    ・レイアウトの調整
+    
+    Message footer
+    ・前日との比較(グラフ)も盛り込む予定
+    ポートフォリオ作成フェーズ
+
+[33mcommit b6a9f860e28c36283152a17f85055b16df0e3f33[m
+Author: matthewkendrick <75340042+matthewkendrick@users.noreply.github.com>
+Date:   Tue Apr 12 21:09:45 2022 +0000
+
+    [Add]: ユーザーTop画面の作成
+    
+    Message body
+    以下を含む
+    ・データ可視化のためのchartkick導入
+    ・WBSの更新
+    ・レイアウトの調整
+    
+    Message footer
+    ポートフォリオ作成フェーズ
+
+[33mcommit b38aab7eacc3467c8c04abf14a669fc7c1225c4a[m
+Author: matthewkendrick <75340042+matthewkendrick@users.noreply.github.com>
+Date:   Tue Apr 12 13:07:50 2022 +0000
+
+    [Edit]: 支出の計算処理の完成(一応)
+    
+    Message body
+    以下を含む
+    ・WBSの更新
+    ・レイアウトの調整
+    
+    Message footer
+    ・fat controllerをどうにかモデルに記述したい
+    
+    ポートフォリオ作成フェーズ
+
+[33mcommit f7c2e8024956f33de7d4a8b7a546edbe83be39f6[m
+Author: matthewkendrick <75340042+matthewkendrick@users.noreply.github.com>
+Date:   Tue Apr 12 02:56:30 2022 +0000
+
+    [Edit]: 支出の計算処理の完成(一応)
+    
+    Message body
+    以下を含む
+    ・WBSの更新
+    ・レイアウトの調整
+    
+    Message footer
+    ポートフォリオ作成フェーズ
+
+[33mcommit 74de1982b4fdf6e270b7dcf3585bca85966963c5[m
+Author: matthewkendrick <75340042+matthewkendrick@users.noreply.github.com>
+Date:   Mon Apr 11 08:04:58 2022 +0000
+
+    [Add]: ユーザーTop画面の作成
+    
+    Message body
+    以下を含む
+    ・収支機能(内部処理)の作成
+    ・WBSの更新
+    ・レイアウトの調整
+    
+    Message footer
+    ポートフォリオ作成フェーズ
+
+[33mcommit e818126bac4b4237cbb3f30d96a31c50527c33c3[m
+Author: matthewkendrick <75340042+matthewkendrick@users.noreply.github.com>
+Date:   Mon Apr 11 00:13:34 2022 +0000
+
+    [Add]: ユーザーTop画面の作成
+    
+    Message body
+    以下を含む
+    ・収支機能(内部処理)の作成
+    ・WBSの更新
+    ・レイアウトの調整
+    
+    Message footer
+    ポートフォリオ作成フェーズ
+
+[33mcommit 49dcf92391f9f5a8928ef51b337630a08355d9e0[m
+Author: matthewkendrick <75340042+matthewkendrick@users.noreply.github.com>
+Date:   Sat Apr 9 21:27:25 2022 +0000
+
+    [Add]: 固定費編集・削除機能の完成
+    
+    Message body
+    以下を含む
+    ・WBSの更新
+    ・レイアウトの調整
+    
+    Message footer
+    ポートフォリオ作成フェーズ
+
+[33mcommit 5f0f50c0cb06ade8ef21a16d371d35546219286a[m
+Author: matthewkendrick <75340042+matthewkendrick@users.noreply.github.com>
+Date:   Sat Apr 9 21:17:54 2022 +0000
+
+    [Add]: 固定費登録機能の完成
+    
+    Message body
+    以下を含む
+    ・WBSの更新
+    ・レイアウトの調整
+    
+    Message footer
+    ポートフォリオ作成フェーズ
+
+[33mcommit 9ba4ff435b7881b98d2b9fe4229c2af4a5604c84[m
+Author: matthewkendrick <75340042+matthewkendrick@users.noreply.github.com>
+Date:   Sat Apr 9 20:42:58 2022 +0000
+
+    [Edit]: 支出登録機能の完成
+    
+    Message body
+    以下を含む
+    ・WBSの更新
+    ・レイアウトの調整
+    
+    Message footer
+    ポートフォリオ作成フェーズ
+
+[33mcommit 865705c1f0abab6f53e70f0da634654cf93fcd13[m
+Author: matthewkendrick <75340042+matthewkendrick@users.noreply.github.com>
+Date:   Sat Apr 9 11:03:17 2022 +0000
+
+    [Edit]: 支出登録機能の作成
+    
+    Message body
+    以下を含む
+    ・WBSの更新
+    ・レイアウトの調整
+    
+    Message footer
+    ポートフォリオ作成フェーズ
+
+[33mcommit 99c5bddccf5c53b7dbb4b3f18104083f934e3046[m
+Author: matthewkendrick <75340042+matthewkendrick@users.noreply.github.com>
+Date:   Fri Apr 8 20:18:40 2022 +0000
+
+    [Edit]: 支出・収入機能のレイアウト調整
+    
+    Message body
+    以下を含む
+    ・WBSの更新
+    
+    Message footer
+    ポートフォリオ作成フェーズ
+
+[33mcommit a8af8ffc893a334d3c7dd61d4de2f639c0314665[m
+Author: matthewkendrick <75340042+matthewkendrick@users.noreply.github.com>
+Date:   Fri Apr 8 08:35:13 2022 +0000
+
+    [Edit]: 支出登録機能の作成
+    
+    Message body
+    以下を含む
+    ・WBSの更新
+    ・レイアウトの調整
+    
+    Message footer
+    ポートフォリオ作成フェーズ
+
+[33mcommit 909a30b5fa95717e2fbd5cd67e1daff93a24ab84[m
+Author: matthewkendrick <75340042+matthewkendrick@users.noreply.github.com>
+Date:   Fri Apr 8 07:31:11 2022 +0000
+
+    [Add]: 収入の削除機能を追加
+    
+    Message body
+    以下を含む
+    ・WBSの更新
+    ・レイアウトの調整
+    
+    Message footer
+    ポートフォリオ作成フェーズ
+
+[33mcommit 72dca20524a941c213f3953836134ad72d087d1d[m
+Author: matthewkendrick <75340042+matthewkendrick@users.noreply.github.com>
+Date:   Fri Apr 8 05:55:43 2022 +0000
+
+    [Update]: 収入登録機能の調整
+    
+    Message body
+    以下を含む
+    ・WBSの更新
+    ・レイアウトの調整
+    
+    Message footer
+    ポートフォリオ作成フェーズ
+
+[33mcommit fa868e1a53614615535e4e8127d56770f8e169b7[m
+Author: matthewkendrick <75340042+matthewkendrick@users.noreply.github.com>
+Date:   Fri Apr 8 02:09:38 2022 +0000
+
+    [Edit]: 収入登録機能の完成
+    
+    Message body
+    以下を含む
+    ・WBSの更新
+    
+    Message footer
+    ポートフォリオ作成フェーズ
+
+[33mcommit 33a49fd3dde8882909dfe2ccf9c435eae4075a4a[m
+Author: matthewkendrick <75340042+matthewkendrick@users.noreply.github.com>
+Date:   Thu Apr 7 09:06:07 2022 +0000
+
+    [Edit]: 収入登録機能の作成
+    
+    Message body
+    以下を含む
+    ・WBSの更新
+    
+    Message footer
+    ポートフォリオ作成フェーズ
+
+[33mcommit d8e82338241c584f5f64d39defb160848a929599[m
+Author: matthewkendrick <75340042+matthewkendrick@users.noreply.github.com>
+Date:   Thu Apr 7 03:12:39 2022 +0000
+
+    [Edit]: 収入・支出・固定費のレイアウトを調整
+    
+    Message body
+    以下を含む
+    ・WBSの更新
+    
+    Message footer
+    ポートフォリオ作成フェーズ
+
+[33mcommit e68d60a661d6712828efceb58e9f3024c6224b23[m
+Author: matthewkendrick <75340042+matthewkendrick@users.noreply.github.com>
+Date:   Wed Apr 6 12:00:49 2022 +0000
+
+    [Edit]: アプリケーションの再作成
+    
+    Message body
+    以下を含む
+    ・WBSの更新
+    
+    Message footer
+    ポートフォリオ作成フェーズ

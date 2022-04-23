@@ -11,6 +11,8 @@ import "channels"
 import "chartkick/highcharts";
 import "jquery";
 import "bootstrap";
+import '../stylesheets/application';
+
 
 Rails.start()
 Turbolinks.start()

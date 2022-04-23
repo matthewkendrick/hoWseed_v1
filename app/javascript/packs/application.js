@@ -10,7 +10,6 @@ import "channels"
 
 import "chartkick/highcharts";
 import "jquery";
-import "jquery_ujs";
 import "popper";
 import "bootstrap";
 

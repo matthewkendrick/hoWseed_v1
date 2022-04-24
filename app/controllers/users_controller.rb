@@ -27,18 +27,23 @@ class UsersController < ApplicationController
     @todays_expenses      = Expense.where(user_id: current_user.id).where(created_at: range_today)
     @yesterdays_expenses  = Expense.where(user_id: current_user.id).where(created_at: range_yesterday)
 
-    @balances_sum_expense = @expenses.sum(:amount)
-    @balances_sum_fixed   = @fixed_expenses.sum(:amount)
-    @saving               = @incomes.sum(:saving)
-    @expense_all          = @expenses.sum(:amount) + @fixed_expenses.sum(:amount)
-    @balances_2           = @incomes.sum(:amount) - @incomes.sum(:saving)
-    @balance              = @balances_2 - @expense_all
-    @todays_income_true   = @balance / @balance_period
-    @todays_income        = @todays_income_true * 0.6
-    @todays_expense       = @todays_expenses.sum(:amount)
-    @yesterdays_expense   = @yesterdays_expenses.sum(:amount)
-    @todays_ratio         = ( @todays_expense / @todays_income ) * 100
-    @todays_ratio_2       = 100 - @todays_ratio
+    @no_data_flag = false
+    if @expenses.any? && @incomes.any? && @fixed_expenses.any? && @todays_expenses.any? && @yesterdays_expenses.any?
+      @balances_sum_expense = @expenses.sum(:amount)
+      @balances_sum_fixed   = @fixed_expenses.sum(:amount)
+      @saving               = @incomes.sum(:saving)
+      @expense_all          = @expenses.sum(:amount) + @fixed_expenses.sum(:amount)
+      @balances_2           = @incomes.sum(:amount) - @incomes.sum(:saving)
+      @balance              = @balances_2 - @expense_all
+      @todays_income_true   = @balance / @balance_period
+      @todays_income        = @todays_income_true * 0.6
+      @todays_expense       = @todays_expenses.sum(:amount)
+      @yesterdays_expense   = @yesterdays_expenses.sum(:amount)
+      @todays_ratio         = ( @todays_expense / @todays_income ) * 100
+      @todays_ratio_2       = 100 - @todays_ratio
+    else
+      @no_data_flag = true
+    end
   end
 
   def new

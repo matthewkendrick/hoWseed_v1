@@ -12,9 +12,9 @@
         </div>
         <div class="mt-5">
           <div class="" style="opacity:0.8; display:flex; justify-content:center">
-            <%= pie_chart ({ " ": @todays_ratio.round, "": @todays_ratio_2.round }), library:{title: {text: "今日使える金額<br><br><br>&nbsp;"}}, height: "400px" %>
+            <%= pie_chart ({ " ": @todays_ratio.floor, "": @todays_ratio_2.floor }), library:{title: {text: "今日使える金額<br><br><br>&nbsp;"}}, height: "400px" %>
             <span class="" style="display:flex; position:absolute; font-size:32px; margin-top:13rem">
-              <p class="fas fa-yen-sign fa-lg text-info my-auto"><%= @todays_income.round.to_s(:delimited, delimiter: ',') %></p> 
+              <p class="fas fa-yen-sign fa-lg text-info my-auto"><%= @todays_income.floor.to_s(:delimited, delimiter: ',') %></p> 
             </span>
           </div>
           <div class="accordion col-md-7 col-lg-9 mx-auto" id="accordionExample">

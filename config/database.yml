@@ -27,5 +27,6 @@ production:
   encoding: utf8mb4
   charset: utf8mb4
   collation: utf8mb4_general_ci
-  host: <%= ENV['DB_USERNAME'] %>
+  host: <%= ENV['DB_HOST'] %>
   password: <%= ENV['DB_PASSWORD'] %>
+  username: <%= ENV['DB_USERNAME'] %>

@@ -2,20 +2,18 @@
   <div class="jumbotron">
     <div class="row">
       <div class="col-sm-12 col-lg-7 mx-auto">
-      <% if @no_data_flag == false %>
         <div class="pt-3 pb-1 mx-auto" style="border-radius:32px; text-align:center; max-width:450px; background-color:rgba( 255, 193, 7, 0.7 )">
           <h3>
             <%= @today %>
           </h3>
+      <% if @no_data_flag == false %>
           <h6 class="text-secondary mr-2" style="opacity:0.8">
             <%= Date.current.beginning_of_month %> 〜 <%= Date.current.end_of_month %>
           </h6>
         </div>
         <div class="mt-5">
           <div class="" style="opacity:0.8; display:flex; justify-content:center">
-            <% if @todays_ratio.present? && todays_ratio_2.present? %>
-              <%= pie_chart ({ " ": @todays_ratio.round, "": @todays_ratio_2.round }), library:{title: {text: "今日使える金額<br><br><br>&nbsp;"}}, height: "400px" %>
-            <% end %>
+            <%= pie_chart ({ " ": @todays_ratio.round, "": @todays_ratio_2.round }), library:{title: {text: "今日使える金額<br><br><br>&nbsp;"}}, height: "400px" %>
             <span class="" style="display:flex; position:absolute; font-size:32px; margin-top:13rem">
               <p class="fas fa-yen-sign fa-lg text-info my-auto"><%= @todays_income.round.to_s(:delimited, delimiter: ',') %></p> 
             </span>

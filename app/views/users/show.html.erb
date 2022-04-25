@@ -10,6 +10,7 @@
           <h6 class="text-secondary mr-2" style="opacity:0.8">
             <%= Date.current.beginning_of_month %> 〜 <%= Date.current.end_of_month %>
           </h6>
+      <% if @no_data_flag == false %>
         </div>
         <div class="mt-5">
           <div class="" style="opacity:0.8; display:flex; justify-content:center">

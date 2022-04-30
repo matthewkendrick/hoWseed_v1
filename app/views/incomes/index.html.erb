@@ -22,14 +22,14 @@
           <div class="">
             <h4>収入額</h4>
             <div class="ml-5" style="text-align:right;">
-              <p class="fas fa-yen-sign fa-lg text-info my-auto" style="text-align:right"><%= ( income.amount ).to_s(:delimited, delimiter: ',') %></p>
+              <p class="text-info my-auto" style="text-align:right"><i class="fas fa-yen-sign fa-lg"></i><%= ( income.amount ).to_s(:delimited, delimiter: ',') %></p>
             </div>
             <p class="mb-3 border"></p>
             <div class="ml-auto" style="min-width:100px">
               <h4>貯金額</h4>
             </div>
             <div class="ml-5" style="text-align:right;">
-              <p class="fas fa-yen-sign fa-lg text-info my-auto" style="text-align:right"><%= ( income.saving ).to_s(:delimited, delimiter: ',') %></p><br>
+              <p class=" text-info my-auto" style="text-align:right"><i class="fas fa-yen-sign fa-lg"></i><%= ( income.saving ).to_s(:delimited, delimiter: ',') %></p><br>
             </div>
             <div class="mb-3 border"></div>
             <h4>Period</h4>

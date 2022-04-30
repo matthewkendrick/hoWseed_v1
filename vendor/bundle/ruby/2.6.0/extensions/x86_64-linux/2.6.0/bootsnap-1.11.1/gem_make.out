@@ -1,0 +1,28 @@
+current directory: /home/ec2-user/hoWseed_v1/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.11.1/ext/bootsnap
+/home/ec2-user/.rbenv/versions/2.6.3/bin/ruby -I /home/ec2-user/.rbenv/versions/2.6.3/lib/ruby/2.6.0 -r ./siteconf20220420-12685-1bl5ex.rb extconf.rb
+creating Makefile
+
+current directory: /home/ec2-user/hoWseed_v1/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.11.1/ext/bootsnap
+make "DESTDIR=" clean
+
+current directory: /home/ec2-user/hoWseed_v1/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.11.1/ext/bootsnap
+make "DESTDIR="
+compiling bootsnap.c
+bootsnap.c: 関数 ‘bs_rb_fetch’ 内:
+bootsnap.c:361:3: 警告: ISO C90 は宣言とコードの混合を禁止しています [-Wdeclaration-after-statement]
+   char * cachedir = RSTRING_PTR(cachedir_v);
+   ^~~~
+bootsnap.c: 関数 ‘bs_rb_precompile’ 内:
+bootsnap.c:388:3: 警告: ISO C90 は宣言とコードの混合を禁止しています [-Wdeclaration-after-statement]
+   char * cachedir = RSTRING_PTR(cachedir_v);
+   ^~~~
+bootsnap.c: トップレベル:
+cc1: 警告: 認識できないコマンドラインオプション ‘-Wno-self-assign’ です
+cc1: 警告: 認識できないコマンドラインオプション ‘-Wno-parentheses-equality’ です
+cc1: 警告: 認識できないコマンドラインオプション ‘-Wno-constant-logical-operand’ です
+cc1: 警告: 認識できないコマンドラインオプション ‘-Wno-cast-function-type’ です
+linking shared-object bootsnap/bootsnap.so
+
+current directory: /home/ec2-user/hoWseed_v1/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.11.1/ext/bootsnap
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 bootsnap.so ./.gem.20220420-12685-1t8bnw3/bootsnap

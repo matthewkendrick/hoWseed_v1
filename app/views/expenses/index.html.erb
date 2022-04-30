@@ -15,7 +15,7 @@
                 <p class="mr-auto">
                   <%= expense.description %>
                 </p>
-                <p class="fas fa-yen-sign fa-lg text-info my-auto" style="text-align:right"><%= ( expense.amount ).to_s(:delimited, delimiter: ',') %></p>
+                <p class="text-info my-auto" style="text-align:right"><i class="fas fa-yen-sign fa-lg"></i><%= ( expense.amount ).to_s(:delimited, delimiter: ',') %></p>
               </h4>
             </div>
             <p class="border"></p>
@@ -23,7 +23,7 @@
           <div><%= expense.updated_at %></div>
           <div class="my-auto" style="text-align:right">
             <%= link_to edit_expense_path(expense.id), class: "btn btn-outline-secondary rounded-circle" do %>
-              <i class="far fa-pen"></i>
+              <i class="fas fa-pen"></i>
             <% end %>
           </div>
         </div>

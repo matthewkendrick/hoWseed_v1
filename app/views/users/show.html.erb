@@ -6,80 +6,79 @@
           <h3>
             <%= @today %>
           </h3>
-      <% if @no_data_flag == false %>
           <h6 class="text-secondary mr-2" style="opacity:0.8">
             <%= Date.current.beginning_of_month %> 〜 <%= Date.current.end_of_month %>
           </h6>
-      <% if @no_data_flag == false %>
         </div>
-        <div class="mt-5">
-          <div class="" style="opacity:0.8; display:flex; justify-content:center">
-            <%= pie_chart ({ " ": @todays_ratio.round, "": @todays_ratio_2.round }), library:{title: {text: "今日使える金額<br><br><br>&nbsp;"}}, height: "400px" %>
-            <span class="" style="display:flex; position:absolute; font-size:32px; margin-top:13rem">
-              <p class="fas fa-yen-sign fa-lg text-info my-auto"><%= @todays_income.round.to_s(:delimited, delimiter: ',') %></p> 
-            </span>
-          </div>
-          <div class="accordion col-md-7 col-lg-9 mx-auto" id="accordionExample">
-            <div class="card">
-              <div class="card-header" id="headingOne"">
-                <h2 class="mb-0">
-                  <button class="btn btn-link btn-block" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" style="opacity:0.8; text-decoration:none; font-size:24px;">
-                    <strong>Details</strong>
-                  </button>
-                </h2>
-              </div>
+        <% if @no_data_flag == false %>
+          <div class="mt-5">
+            <div class="" style="opacity:0.8; display:flex; justify-content:center">
+              <%= pie_chart ({ " ": @todays_ratio.round, "": @todays_ratio_2.round }), library:{title: {text: "今日使える金額<br><br><br>&nbsp;"}}, height: "400px" %>
+              <span class="" style="display:flex; position:absolute; font-size:32px; margin-top:13rem">
+                <p class="fas fa-yen-sign fa-lg text-info my-auto"><%= @todays_income.round.to_s(:delimited, delimiter: ',') %></p> 
+              </span>
+            </div>
+            <div class="accordion col-md-7 col-lg-9 mx-auto" id="accordionExample">
+              <div class="card">
+                <div class="card-header" id="headingOne"">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link btn-block" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" style="opacity:0.8; text-decoration:none; font-size:24px;">
+                      <strong>Details</strong>
+                    </button>
+                  </h2>
+                </div>
 
-              <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                <div class="card-body">
-                  <div class="">
-                    <%= link_to expenses_path, class: "btn btn-block" do %>
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                  <div class="card-body">
+                    <div class="">
+                      <%= link_to expenses_path, class: "btn btn-block" do %>
+                        <h5>
+                          今日使った金額 <br><br>
+                          <p class="fas fa-yen-sign my-auto mr-1 fa-lg text-info"><%= @todays_expense %></p>
+                        </h5>
+                      <% end %>
+                    </div>
+                    <p class="border"></p>
+                    <div class="" style="min-width:100px">
+                      <%= link_to expenses_path, class: "btn btn-block" do %>
+                        <h5>
+                          昨日使った金額 <br><br>
+                          <p class="fas fa-yen-sign my-auto mr-1 fa-lg text-info"><%= @yesterdays_expense %></p>
+                        </h5>
+                      <% end %>
+                    </div>
+                    <p class="border"></p>
+                    <div class="" style="min-width:100px">
+                      <%= link_to incomes_path, class: "btn btn-block" do %>
+                        <h5>
+                          今月の貯金額 <br><br>
+                          <p class="fas fa-yen-sign my-auto mr-1 fa-lg text-info"><%= @saving.to_s(:delimited, delimiter: ',') %></p>
+                        </h5>
+                      <% end %>
+                    </div>
+                    <p class="border"></p>
+                    <div class="">
+                      <%= link_to fixed_expenses_path, class: "btn btn-block" do %>
+                        <h5>
+                          固定費の合計 <br><br>
+                          <p class="fas fa-yen-sign my-auto mr-1 fa-lg text-info"><%= @balances_sum_fixed.to_s(:delimited, delimiter: ',') %></p>
+                        </h5>
+                      <% end %>
+                    </div>
+                    <p class="border"></p> <br>
+                    <div class="">
                       <h5>
-                        今日使った金額 <br><br>
-                        <p class="fas fa-yen-sign my-auto mr-1 fa-lg text-info"><%= @todays_expense %></p>
+                        <% if false %><span class="text-warning">...<i class="fas fa-piggy-bank"></i></span> 次の給料日まであと <%= @balance_period %> 日です。<% end %>
                       </h5>
-                    <% end %>
-                  </div>
-                  <p class="border"></p>
-                  <div class="" style="min-width:100px">
-                    <%= link_to expenses_path, class: "btn btn-block" do %>
-                      <h5>
-                        昨日使った金額 <br><br>
-                        <p class="fas fa-yen-sign my-auto mr-1 fa-lg text-info"><%= @yesterdays_expense %></p>
-                      </h5>
-                    <% end %>
-                  </div>
-                  <p class="border"></p>
-                  <div class="" style="min-width:100px">
-                    <%= link_to incomes_path, class: "btn btn-block" do %>
-                      <h5>
-                        今月の貯金額 <br><br>
-                        <p class="fas fa-yen-sign my-auto mr-1 fa-lg text-info"><%= @saving.to_s(:delimited, delimiter: ',') %></p>
-                      </h5>
-                    <% end %>
-                  </div>
-                  <p class="border"></p>
-                  <div class="">
-                    <%= link_to fixed_expenses_path, class: "btn btn-block" do %>
-                      <h5>
-                        固定費の合計 <br><br>
-                        <p class="fas fa-yen-sign my-auto mr-1 fa-lg text-info"><%= @balances_sum_fixed.to_s(:delimited, delimiter: ',') %></p>
-                      </h5>
-                    <% end %>
-                  </div>
-                  <p class="border"></p> <br>
-                  <div class="">
-                    <h5>
-                      <% if false %><span class="text-warning">...<i class="fas fa-piggy-bank"></i></span> 次の給料日まであと <%= @balance_period %> 日です。<% end %>
-                    </h5>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      <% else %>
-        データがありません
-      <% end %>
+        <% else %>
+          データがありません
+        <% end %>
       </div>
     </div>
   </div>

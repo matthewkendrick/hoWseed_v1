@@ -13,8 +13,11 @@
  *= require_tree .
  *= require_self
  */
-
- @import '~@fortawesome/fontawesome-free/scss/fontawesome';
+ $fa-font-path: '@fortawesome/fontawesome-free/webfonts';
+ @import '@fortawesome/fontawesome-free/scss/fontawesome';
+ @import '@fortawesome/fontawesome-free/scss/solid';
+ @import '@fortawesome/fontawesome-free/scss/regular';
+ @import '@fortawesome/fontawesome-free/scss/brands';
  @import "bootstrap";
  @import "nav.scss";
  @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&display=swap');

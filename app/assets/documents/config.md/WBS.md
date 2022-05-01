@@ -2,7 +2,7 @@
 
 | WBS  | Categories&nbsp;and&nbsp;Tasks                                            | Start      | Finish     | 工数(h) |                       Progress                        |
 | ---- | ------------------------------------------------------------------------- | ---------- | ---------- | ------: | :---------------------------------------------------: |
-| 1    | &nbsp;                                                                    | 2022/04/01 | 2022/04/25 |  162.00 | ![progress](https://progress-bar.dev/88/ "progress")  |
+| 1    | &nbsp;                                                                    | 2022/04/01 | 2022/04/25 |  162.00 | ![progress](https://progress-bar.dev/93/ "progress")  |
 | 2    | <span style= "color:#007bff; font-size:20px"><strong><設計></span>        | &nbsp;     | &nbsp;     |       - | ![progress](https://progress-bar.dev/100/ "progress") |
 | 3    | <strong>基本設計                                                          | 2022/04/01 | 2022/04/01 |       - | ![progress](https://progress-bar.dev/100/ "progress") |
 | 3.1  | テーマ策定                                                                | 2022/04/01 | 2022/04/01 |       - | ![progress](https://progress-bar.dev/100/ "progress") |
@@ -48,8 +48,8 @@
 | 10.1 | 画面テスト                                                                | 2022/04/19 | 2022/04/19 |    6.00 | ![progress](https://progress-bar.dev/100/ "progress") |
 | 10.2 | 機能テスト                                                                | 2022/04/20 | 2022/04/20 |    6.00 | ![progress](https://progress-bar.dev/100/ "progress") |
 | 10.3 | アクセス権限                                                              | 2022/04/21 | 2022/04/21 |    3.00 | ![progress](https://progress-bar.dev/100/ "progress") |
-| 11   | <span style= "color:#007bff;font-size:20px"><strong><デプロイ><br></span> | 2022/04/22 | 2022/04/25 |       - | ![progress](https://progress-bar.dev/50/ "progress")  |
+| 11   | <span style= "color:#007bff;font-size:20px"><strong><デプロイ><br></span> | 2022/04/22 | 2022/05/03 |       - | ![progress](https://progress-bar.dev/71/ "progress")  |
 | 11.1 | AWS設定                                                                   | 2022/04/22 | 2022/04/22 |   12.00 | ![progress](https://progress-bar.dev/100/ "progress") |
-| 11.2 | nginx,puma設定                                                            | 2022/04/23 | 2022/04/23 |   12.00 | ![progress](https://progress-bar.dev/100/ "progress") |
-| 11.3 | アプリケーション修正                                                      | 2022/04/24 | 2022/04/25 |   12.00 |  ![progress](https://progress-bar.dev/0/ "progress")  |
-| 12   | <span style= "color:#007bff;font-size:20px"><strong><リリース></span>     | 2022/04/01 | 2022/04/25 |       - |  ![progress](https://progress-bar.dev/0/ "progress")  |
+| 11.2 | nginx,puma設定                                                            | 2022/04/23 | 2022/04/28 |   12.00 | ![progress](https://progress-bar.dev/100/ "progress") |
+| 11.3 | アプリケーション修正                                                      | 2022/04/24 | 2022/05/03 |   12.00 | ![progress](https://progress-bar.dev/50/ "progress")  |
+| 12   | <span style= "color:#007bff;font-size:20px"><strong><リリース></span>     | 2022/04/01 | 2022/05/03 |       - |  ![progress](https://progress-bar.dev/0/ "progress")  |

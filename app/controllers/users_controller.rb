@@ -28,7 +28,7 @@ class UsersController < ApplicationController
     @yesterdays_expenses  = Expense.where(user_id: current_user.id).where(created_at: range_yesterday)
 
     @no_data_flag = false
-    if @expenses.any? && @incomes.any? && @fixed_expenses.any? && @todays_expenses.any? && @yesterdays_expenses.any?
+    if @expenses.any? || @incomes.any? || @fixed_expenses.any? || @todays_expenses.any? || @yesterdays_expenses.any?
       @balances_sum_expense = @expenses.sum(:amount)
       @balances_sum_fixed   = @fixed_expenses.sum(:amount)
       @saving               = @incomes.sum(:saving)
